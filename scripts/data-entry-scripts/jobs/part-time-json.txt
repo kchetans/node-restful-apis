@@ -1,0 +1,63 @@
+[
+  '{{repeat(500, 500)}}',
+  {
+      company_name  : '{{company().toUpperCase()}}',
+      job_title : '{{lorem(4, "word")}}',
+      category : function(tags){
+      var fruits = ["Beautician", "Bouncer", "Caretaker / Nanny", "Carpenter", "Cleaner", "Driver", "Electrician",
+      "Fire Fighter", "Gardener", "Hair Dresser", "Handyman", "Insurance Consultant", "Life Guard", "Maid", "Mechanic",
+      "Plumber", "Security", "Tailor", "Wireman", "Others", "Delivery/Collections", "Packager", "Warehouse Executive",
+      "Courier", "Bartender", "Chef", "Cook", "Event Planner", "Hospitality Executive", "Host/Hostess", "Housekeeper",
+      "Porter", "Receptionist", "Valet", "Waiter", "Cashier", "Floor Manager", "Market Research Analyst",
+      "Marketing Executive", "Purchase Executive", "Sales Executive", "Data Collection", "Data Entry", "Telecaller",
+      "Ticketing Executive", "Back Office", "Labourer", "Control Room Operator", "Dye Maker", "Electroplater",
+      "Engineer", "Fitter", "Foundryman", "Moulder", "Machinist", "Rigger", "Safety Officer", "Sheet Metal Worker",
+      "Soldering Operator", "Welder", "Data Scientist", "Database", "IT Hardware", "Software - Developer",
+      "QA / Test Engineer", "Web Designer", "SAP Consultant", "Software Architect", "Network Engineer", "Animation",
+      "Architect", "Cameraman", "Content Writer", "Designer", "DTP Operator / Print Consultant", "Dubbing Artist",
+      "Editor", "Fashion Designer", "Language Translator", "Lighting Technician", "Painter", "Photographer",
+      "Projectionist", "Public Relations", "Reporter", "Sound Engineer", "Videographer", "Doctor", "Lab Assistant",
+      "Medical Assistant", "Microbiologist", "Nurse", "Nutritionist", "Optometrist", "Pharmacist", "Ward Boy",
+      "Business Analyst", "HR / Admin", "MIS Executive", "Office Assistant / Helper", "Product Manager",
+      "Quality and Inspection", "Accountant", "Draftsman", "Financial Advisor", "Legal Advisor", "Counsellor",
+      "Librarian", "Sports Trainer", "Teacher"];
+              return fruits[tags.integer(0, fruits.length - 1)];
+            },
+      gender :   function (tags) {
+        var fruits = ['male', 'female', 'both'];
+        return fruits[tags.integer(0, fruits.length - 1)];
+      },
+      type : 'part_time',
+      city : function(tags){
+        var fruits = ['Delhi', 'New Delhi' , 'Banglore' , 'Noida'];
+        return fruits[tags.integer(0, fruits.length - 1)];
+      },
+    language :function(tags){
+        var fruits = ['tamil', 'english' , 'hindi' , 'telgu'];
+        return fruits[tags.integer(0, fruits.length - 1)];
+      },
+      address : function(tags){
+        var fruits = ['Civil Road', 'Central Mall' , 'MG Road' , 'Gov office'];
+        return fruits[tags.integer(0, fruits.length - 1)];
+      },
+      no_of_open_vacancies : '{{integer(20, 40)}}',
+		min_qualification : function(tags){
+         var fruits = ['eigth_pass', 'tenth_pass' , 'twelfth_pass' , 'graduate'];
+        return fruits[tags.integer(0, fruits.length - 1)];
+        },
+      last_date : '2018-01-01',
+      min_salary : '{{integer(10000, 15000)}}',
+      max_salary : '{{integer(15000, 25000)}}',
+      description : '{{lorem(1, "paragraphs")}}',
+    job_days: function(tags) {
+      var fruits = ['weekend', 'weekdays'];
+      return fruits[tags.integer(0, fruits.length - 1)];
+    },
+    job_timing: function(tags) {
+      var fruits = ['night', 'day', 'evening', 'morning'];
+      return fruits[tags.integer(0, fruits.length - 1)];
+    },
+    start_date: '2018-01-01',
+    end_date: '2017-11-01'
+  }
+]

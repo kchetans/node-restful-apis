@@ -1,0 +1,5 @@
+{
+  "otp": "Use {otp} to confirm your Workex Account. Thank you for joining Workex, The Work Life Platform.",
+  "invite": "{name} has invited you to WorkexJobs. Click here to download it from play store: {app_url}",
+  "request_review": "Dear {askedPersonNmae},\n Trust you're doing great.\n I would like to request a Review from you for my WorkEx profile. This will improve my chances for employment and will add more credibility to my profile.\n Here is a handy link: {reviewUrl}\n  Thanks, {name} For any help/support, please reach out to our Support Team at: support@workex.xyz OR 080-12345678910"
+}

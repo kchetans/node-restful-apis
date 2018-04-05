@@ -1,0 +1,66 @@
+[
+  {
+    "value": "barista_bartender",
+    "key": "Barista & Bartender"
+  },
+  {
+    "value": "beauty_Wellness",
+    "key": "Beauty & Wellness"
+  },
+  {
+    "value": "careworkers_health",
+    "key": "Careworkers & Health"
+  },
+  {
+    "value": "chef_cook",
+    "key": "Chef & Cook"
+  },
+  {
+    "value": "cleaner",
+    "key": "Cleaner"
+  },
+  {
+    "value": "construction",
+    "key": "Construction"
+  },
+  {
+    "value": "driver_courier",
+    "key": "Driver & Courier"
+  },
+  {
+    "value": "education",
+    "key": "Education"
+  },
+  {
+    "value": "events_promotion",
+    "key": "Events & Promotion"
+  },
+  {
+    "value": "kitchen_porter",
+    "key": "Kitchen Porter"
+  },
+  {
+    "value": "office_admin",
+    "key": "Office & Admin"
+  },
+  {
+    "value": "retail",
+    "key": "Retail"
+  },
+  {
+    "value": "sales_marketing",
+    "key": "Sales & Marketing"
+  },
+  {
+    "value": "waiter_waitress",
+    "key": "Waiter / Waitress"
+  },
+  {
+    "value": "warehouse",
+    "key": "Warehouse"
+  },
+  {
+    "value": "others",
+    "key": "Others"
+  }
+]

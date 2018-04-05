@@ -1,0 +1,18 @@
+[
+  '{{repeat(10, 10)}}',
+  {
+    name  : '{{lorem("2", "word").toUpperCase()}}',
+    mobile_no : '{{integer(8000000000, 9999999999)}}',
+    roles : 'employer',
+    org_code : 'org_code_{{integer(1, 100)}}',
+    org_name : '{{lorem(1, "word").toUpperCase()}}',
+    org_type : 'Staffing',
+    org_log_url: 'org_logo_url_{{integer(1, 10)}}',
+    contact_details: {
+       web_site_url: 'web_site_url_{{integer(1, 10)}}'
+    },
+    registered_person: {
+      designation: 'designation'
+    }
+  }
+]

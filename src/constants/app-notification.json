@@ -1,0 +1,6 @@
+{
+  "job_application_received": {
+    "title": "Job Application Received",
+    "body": "{user_name} has applied for post \"{job_title}\""
+  }
+}

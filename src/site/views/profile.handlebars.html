@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Example App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+    <style type="text/css">
+    	*{
+    		box-sizing: border-box;
+    	}
+
+    	body{
+    		background-color: #eceff1;
+    	}
+
+    	.wrapper{
+    		width: 700px;
+    		margin: 0 auto;
+    	}
+
+    	.row{
+    		display: flex;
+    		width: 100%;
+    	}
+
+    	.row:after, .row:before{
+    		content:"";
+    		display: table;
+    		clear: both;
+    	}
+
+    	.col-4{
+    		width: 33.33%;
+    	}
+
+    	.col-8{
+    		width: 66.66%;
+    	}
+
+    	.left-panel{
+    		/*border-left: solid 12px #6C86FF;*/
+    		background-color: #27315E;
+    		background-color: red;
+    		font-family: Roboto-Medium;
+			font-size: 1.4rem;
+			color: rgba(255,255,255,0.87);
+			letter-spacing: 0;
+			text-align: center;
+			padding-top: 10px;
+    	}
+
+    	.right-panel{
+    		background-color: white;
+    	}
+
+    	.info-box{
+    		width: 98%;
+    		margin: 0 auto;
+    		border-bottom: solid 2px rgba(151,151,151, .33);
+    		padding-left: 10%;
+    	}
+
+    	.name{
+    		color: #27315E;
+    		color: red;
+    		font-size: 2rem;
+    	}
+
+    	.key{
+    		color: rgba(0,0,0, .87);
+    	}
+
+    	.property{
+    		color: rgba(0,0,0,.67);
+    	}
+
+    	.profile_img{
+    		width: 120px;
+    		height: 120px;
+    		border-radius: 120px;
+    	}
+    </style>
+</head>
+<body>
+
+	<div class="wrapper">
+	    <div class="row">
+	    	<div class="col-4 left-panel">
+	    		<img src="{{userProfile.profile_pic_url}}" class="profile_img" title="{{userProfile.name}}" />
+	    	</div>
+	    	<div class="col-8 right-panel">
+	    		<div class="info-box">
+			    	<p class="name">
+			    		{{userProfile.name}}
+			    	</p>
+			    	<div>
+			    		<p>current_job:</p>
+			    		<p>location:</p>
+			    		<p>
+			    			<span class="key">Experience:</span> 
+			    			<span class="property">{{userProfile.total_experience}} {{userProfile.total_experience_unit}}</span>
+			    		</p>
+			    		<p>current_location:</p>
+			    	</div>
+	    		</div>
+	    	</div>
+
+	    </div>
+
+	    <!-- Personal Info -->
+	    <div class="row">
+	    	<div class="col-4 left-panel">
+	    		Personal User
+	    	</div>
+	    	<div class="col-8 right-panel">
+			    <div class="info-box">
+			    	<p>
+			    		<span class="key">DOB :</span>
+			    		<span class="property">{{userProfile.dob}}</span>
+			    	</p>
+			    	<p>
+			    		<span class="key">Email-id :</span>
+			    		<span class="property">{{userProfile.email}}</span>
+			    	</p>
+			    	<p>
+			    		<span class="key">Phone :</span>
+			    		<span class="property">{{userProfile.mobile_no}}</span>
+			    	</p>
+			    	<p>
+			    		<span class="key">Language :</span>
+			    		<span class="property">
+			    			{{#userProfile.languages}}
+			    				{{this}}, 
+			    			{{/userProfile.languages}}
+			    		</span>
+			    	</p>
+			    	<p>
+			    		<span class="key">Gender :</span>
+			    		<span class="property">{{userProfile.gender}}</span>
+			    	</p>
+			    </div>
+	    	</div>
+	    </div>
+
+	    <!-- Education -->
+	    <div class="row">
+	    	<div class="col-4 left-panel">
+	    		Education
+	    	</div>
+	    	<div class="col-8 right-panel">
+			    <div class="info-box">
+			   		{{#userEducation}} 
+			    		<p>
+			    			<span class="key">{{institute}}</span> -  
+			    			<span class="property">{{course}}</span> 
+			    		</p>
+			   		{{/userEducation}} 
+			    </div>
+	    	</div>
+	    </div>    
+
+	    <!-- Experience -->
+	    <div class="row">
+	    	<div class="col-4 left-panel">
+	    		Experience
+	    	</div>
+	    	<div class="col-8 right-panel">
+			    <div class="info-box">
+			    	{{#userExperience}} 
+			    		<p>
+			    			<span class="key">{{company}}</span> -  
+			    			<span class="key">{{designation}}</span>
+			    			<br/>
+			    			<span class="property">{{duration}} {{duration_unit}}</span> 
+			    		</p>
+			   		{{/userExperience}} 
+			    </div>
+	    	</div>
+	    </div>
+
+	    <!-- Skill and Certificate -->
+	    <div class="row">
+	    	<div class="col-4 left-panel">
+	    		Skill and Certificate
+	    	</div>
+	    	<div class="col-8 right-panel">
+			    <div class="info-box">
+			    	<p>date of birth</p>
+			    	<p>date of birth</p>
+			    	<p>date of birth</p>
+			    	<p>date of birth</p>
+			    </div>
+	    	</div>
+	    </div>
+	</div>
+
+</body>
+</html>

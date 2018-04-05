@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html ng-app="userReview">
+<head>
+  <meta charset="utf-8">
+	<title>Workex</title>
+  <link rel="icon" type="image/png" href="https://s3.ap-south-1.amazonaws.com/wx-logo/logo_original_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+		body{
+			background-color: whitesmoke;
+      font-family: "Roboto", Times, serif;
+		}
+
+    .p-1{
+      padding: 1rem;
+    }
+
+    .pt-1{
+      padding-top: 1rem;
+    }
+
+    .pb-1{
+      padding-bottom: 1rem;
+    }
+
+		.mt-1{
+			margin-top: 1rem;
+		}
+
+		.input-group{
+			margin: .7rem 0;
+		}
+
+		.input-group__label{
+			width: 100%;
+			color: grey;
+			opacity: .8;
+			font-size: .8rem;
+		}
+
+		.input-group__input{
+			width: 100%;
+			border: none;
+			border-bottom: solid 1px #e3e3e3;
+		}
+
+		.input-group__textarea{
+			width: 100%;
+			border: none;
+			background-color: #f2f2f2;
+			border-radius: .5rem;
+			height: 7rem;
+			padding: .5rem;
+		}
+		.input-group__input:focus, .input-group__textarea:focus{
+			outline: none;
+		}
+
+		.input-group__input:disabled{
+			background-color: white;
+		}
+
+		.submit_btn{
+			width: 100%;
+			background-color: red;
+			color: white;
+			text-align: center;
+			font-size: 1.2rem;
+			padding: .5rem;
+			font-weight: 400;
+		}
+
+    .wrapper{
+      max-width: 360px;
+      margin: 0 auto;
+			background-color: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0, 0,0,0.24);			
+    }
+
+    .navbar{
+      padding: .5rem;
+      background-color: white;
+      text-align: left;
+      color: red;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0, 0,0,0.24);
+    }
+
+    .navbar::after{
+      content: " ";
+      display: table;
+      clear: both;
+    }
+
+    .navbar__workexlogo{
+      height: 2rem;
+      vertical-align: middle;
+    }
+
+    .navbar__workexlogotitle{
+      color: black;
+      text-decoration: none;
+      display: inline;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .navbar__downloadlogo{
+      float: right;
+      padding: .5rem;
+      cursor: pointer;
+    }
+
+    .navbar__downloadlogo > a{
+      text-decoration: none;
+      color: red;
+      cursor: pointer;
+    }
+
+    .profile{
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .profile::after{
+      content: " ";
+      display: table;
+      clear: both;
+    }
+
+    .profile__logo{
+      width: 80px;
+      height: 80px;
+      border-radius: 80px;
+      border: solid 2px red;
+      padding: 4px;
+    }
+
+    .profile__logo_container{
+			width: 30%;
+      float: left;
+    }
+
+    .profile__info_container{
+			width: 70%;
+			float: left;
+    }
+
+		.profile__name, .profile__status{
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.profile__name{
+			padding-top: 1rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #222222;
+		}
+
+    .profile__status{
+      color: #7a7a7a;
+      padding-top: .22rem;
+      font-size: .9rem;
+    }
+
+    .message{
+			padding-left: 1rem;
+			padding-right: 1rem;
+    }
+
+		.message__box{
+			background-color: #f2f2f2;
+			border-radius: 1rem;
+			padding: .5rem .7rem .5rem .7rem;
+      color: #959595;
+		}
+
+		.message__to, .message__from{
+			padding: 0;
+			margin: 0;
+			font-size: 1rem;
+			font-weight: 400;
+		}
+
+		.message__body{
+			font-size: .9rem;
+			font-weight: 400;
+			text-align: left;
+      word-break: break-word;
+		}
+
+		.message__from{
+			text-align: right;
+		}
+
+    .review{
+			padding-left: 1rem;
+			padding-right: 1rem;
+    }
+
+		.review__title{
+			font-size: .8rem;
+			font-weight: 400;
+            color: #222222;
+		}
+
+    .workex{
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .workex__heading{
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #555555;
+    }
+
+    .workex__body{
+      font-weight: 100;
+      font-size: 1rem;
+      color: #898989;
+    }
+
+    .workex__logo{
+      width: 100px;
+    }
+
+    .footer{
+      background-color: #303030;
+      color: white;
+    }
+
+    .modal{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 70%;
+      background-color: white;
+      min-height: 100px;
+      border-radius: .5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0, 0,0,0.24);
+      z-index: 2;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 500ms ease-out;
+    }
+
+    .modal__title{
+      padding: .5rem;
+      width: 100%;  
+      border-bottom: solid 1px grey;    
+      margin-bottom: 1rem;  
+    }
+
+    .modal__option{
+      font-size: 1rem;
+      padding: .5rem;
+      padding-left: 2rem;
+      display: block;
+    }
+
+    .modal__footer{
+      border-top: solid 1px grey;
+      text-align: center;
+      padding: .5rem;
+      margin-top: 1rem;
+    }
+
+    .overlay{
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      background-color:rgba(0,0,0, .34);
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 500ms ease-out;
+    }
+
+    .overlay--active{
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .modal--active{
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .thankyou{
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script>
+    app = angular.module('userReview',[]);
+
+    app.config(function($interpolateProvider) {
+      $interpolateProvider.startSymbol('{[{');
+      $interpolateProvider.endSymbol('}]}');
+    });
+
+    app.controller("MainController", ['$http', '$location',function($http, $location){
+      
+      var that = this;
+      
+      this.name;
+      this.email;
+      this.mobileNumber;
+
+      this.review;
+      this.association;
+
+      this.reviewId;
+
+      this.showModal = false;
+
+      this.reviewGiven = {{review_given}};
+
+      this.associations = [
+        'Friend', 
+        'Relative',
+        'Colleague',
+        'Senior',
+        'Junior',
+        'Boss'
+      ];
+
+      this.setAssociation = function(){
+        console.log("Display modals");
+        that.showModal = false;
+        var value = document.querySelector('input[name="association"]:checked').value;
+
+        that.association = value;
+      }
+
+      this.submitReview = function(){
+        var payload = {
+          association: this.association,
+          text : this.review,
+          token : this.reviewToken
+        }
+
+        var url = "{{siteUrl}}api/workexnow/v1/users/write-review";
+
+        $http.post(url, payload)
+          .then(function(data){
+            that.reviewGiven = true;
+            console.log("User review submitted");
+        });
+          
+        console.log("Submit Review Button Clicked");
+      }
+
+      this.initData = function(){
+        var absUrl = $location.absUrl();
+        var urlSplits = absUrl.split("/");
+        that.reviewToken = urlSplits[urlSplits.length -1].split("?")[0];
+      }
+  }]);
+
+
+
+
+  </script>
+</head>
+<body ng-controller="MainController as main" ng-init="main.initData()">
+	
+	<div class="wrapper">  
+        
+    <!-- this code is for navbar  -->
+    <div class="navbar">
+      <a href="http://workex.in/" target="_blank">
+        <img src="https://s3.ap-south-1.amazonaws.com/wx-logo/logo_original_icon.png" class="navbar__workexlogo">
+        <h2 class="navbar__workexlogotitle">Workex</h2>
+      </a>
+      <span class="navbar__downloadlogo"><a href="https://play.google.com/store/apps/details?id=com.workexjobapp" style="cursor:pointer;" target="_blank">Download App</a></span>
+    </div>
+
+    <div class="profile mt-1">
+      <div class="profile__logo_container">
+        <a href="{{siteUrl}}pub/profile/{{askedUser._id}}" target="_blank">
+        {{#if askedUser.profile_pic_url}}
+        <img class="profile__logo" src="{{askedUser.profile_pic_url}}" />
+        {{else}}
+        <img class="profile__logo" src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" />        
+        {{/if}}
+        </a>
+      </div>
+      <div class="profile__info_container">
+        <a href="{{siteUrl}}pub/profile/{{askedUser._id}}" target="_blank">
+          <h2 class="profile__name">{{askedUser.name}}</h2>
+        </a>
+        <p class="profile__status">{{askedUser.status}}</p>
+      </div>
+    </div>
+
+    {{#if message}}
+    <div class="message mt-1">
+			<div class="message__box">
+				<h2 class="message__to">Dear {{name}}</h2>
+				<p class="message__body">{{message}}</p>
+				<h2 class="message__from">- From {{askedUser.name}}</h2>
+			</div>
+    </div>
+    {{/if}}
+
+    <div ng-if="main.reviewGiven" class="thankyou">
+      Thank you for submitting your review!
+    </div>
+
+    <div ng-if="!main.reviewGiven" class="review">
+			<h2 class="review__title">Please Review as Requested: </h2>
+			<div class="input-group">
+				<label class="input-group__label">Name</label>
+				<input type="text" class="input-group__input" readonly="readonly" placeholder="{{name}}">
+			</div>
+			<div class="input-group">
+				<label class="input-group__label">Associaton*</label>
+				<input type="text" class="input-group__input" readonly="readonly" ng-click="main.showModal = true;" ng-model="main.association">
+			</div>
+			<div class="input-group">
+				<label class="input-group__label">Email</label>
+				<input type="text" class="input-group__input" readonly="readonly" placeholder="{{email}}">
+			</div>
+			<div class="input-group" style="margin-top:1.4rem;">
+				<textarea class="input-group__textarea" placeholder="Your Review" ng-model="main.review"></textarea>
+			</div>
+
+			<div class="submit_btn" ng-click="main.submitReview()"> Submit </div>
+    </div>
+
+    <div class="card mt-7 workex pb-1">
+      <h2 class="workex__heading pt-1">One of it's kind platform that makes recruitment less burdensome</h2>
+      <p class="workex__body  p-1" style="padding-bottom: 0">
+          Say Goodbye to shifting through resumes, telecalling, background-checks, reference checks and interview
+          scheduling, day in and day out. Just post your job on Workex and see the magic unfold
+      </p>
+      <span>
+        <a href="https://play.google.com/store/apps/details?id=com.workexjobapp" target="_blank">
+          <img src="https://s3.ap-south-1.amazonaws.com/app-util-images/Google_play.png" class="workex__logo" />
+        </a>
+      </span>
+    </div>
+
+    <div class="footer p-1">
+      All copyright reserve to Workex Private Limited.
+    </div>
+
+	</div>
+
+  <div class="overlay" ng-class="{'overlay--active': main.showModal}" ng-click="main.showModal = false;">
+  </div>
+
+	<div class="modal" ng-class="{'modal--active': main.showModal}">
+    <div class="modal__title"> Association </div>
+    <label ng-repeat="association in main.associations" class="modal__option">
+      <input type="radio" name="association" value="{[{association}]}"> {[{association}]}
+    </label>
+    <div class="modal__footer" ng-click="main.setAssociation()">
+      <span>Ok</span>
+    </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.idea/**
+build/**
+scripts/excel-to-json/files/**
+
+# node module copies
+node_modules/**
+!src/node_modules/**
+
+/dist/
+/npm-debug.log
+/files/
+/downloads
+/tmp/
+/src/node_modules/sql-models/*.*
+!/src/node_modules/sql-models/index.js
+/nodemon.json
+/uploads
+/app.json
+/package-lock.json
+
+/src/node_modules/config/env/*.*
+!/src/node_modules/config/env/config.development.json
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+
+/dump.rdb
+/workex-log-jobs.api.workex.in.error.log

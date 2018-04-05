@@ -1,0 +1,16 @@
+{
+  "company_name": "This is company name",
+  "category": "salon",
+  "title": "This is job title",
+  "gender": "both",
+  "type": "full_time",
+  "city": "Gurgaon",
+  "address": "park centra, sector 30",
+  "no_of_open_vacancies": "20",
+  "min_qualification": "eigth_pass",
+  "last_date": "2017-01-01",
+  "language": "telgu",
+  "min_salary": "1000",
+  "max_salary": "2000",
+  "description": "this is samoke job description"
+}

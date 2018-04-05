@@ -1,0 +1,20 @@
+{
+  "category": "salon",
+  "title": "JOB TITLE",
+  "company_name": "Company Name",
+  "gender": "male",
+  "type": "part_time",
+  "city": "CITY",
+  "address": "ADDRESS",
+  "no_of_open_vacancies": "100",
+  "min_qualification": "gradute",
+  "last_date": "2017-01-01",
+  "language": "tamil",
+  "min_salary": "1000",
+  "max_salary": "20000",
+  "description": "JOB DESCIPTION JOB DESCIPTION JOB DESCIPTION",
+  "job_days": "weekend",
+  "job_timing": "night",
+  "start_date": "2017-01-01",
+  "end_date": "2017-11-01"
+}

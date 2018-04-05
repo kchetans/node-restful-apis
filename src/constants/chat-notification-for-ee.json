@@ -1,0 +1,38 @@
+{
+  "job_application_received": {
+    "title": "Candidate's Job Application Received",
+    "body": "{user_name} has applied for post \"{job_title}\""
+  },
+  "profile_interest_sent": {
+    "title": "Profile Interest Sent",
+    "body": "You have shown interest in this profile for \"{job_title}\""
+  },
+  "profile_interest_accepted": {
+    "title": "Profile Interest Accepted",
+    "body": "`{user_name} has accepted your interest for \"{job_title}\""
+  },
+  "profile_interest_declined": {
+    "title": "Profile Interest Declined",
+    "body": "{user_name} has declined your interest for \"{job_title}\""
+  },
+  "job_application_rejected": {
+    "title": "Candidate's Job Application Rejected",
+    "body": "You have declined {user_name} for \"{job_title}\""
+  },
+  "job_application_accepted": {
+    "title": "Candidate's Job Application Accepted",
+    "body": "You have shortlisted {user_name}, for \"{job_title}\""
+  },
+  "offer_letter_sent": {
+    "title": "Offer Letter Sent",
+    "body": "You have sent an offer for \"{job_title}\""
+  },
+  "offer_letter_accepted": {
+    "title": "Offer Letter Accepted",
+    "body": "{user_name} has accepted your offer letter for \"{job_title}\""
+  },
+  "offer_letter_declined": {
+    "title": "Offer Letter Declined",
+    "body": "{user_name} has declined your offer letter for \"{job_title}\""
+  }
+}

@@ -1,0 +1,337 @@
+[
+  {
+    "code": "Adi",
+    "display": "Adi",
+    "display_english": "Adi"
+  },
+  {
+    "code": "Angami",
+    "display": "Angami",
+    "display_english": "Angami"
+  },
+  {
+    "code": "Ao",
+    "display": "Ao",
+    "display_english": "Ao"
+  },
+  {
+    "code": "Assamese",
+    "display": "Assamese",
+    "display_english": "Assamese"
+  },
+  {
+    "code": "Bengali",
+    "display": "Bengali",
+    "display_english": "Bengali"
+  },
+  {
+    "code": "Bhili",
+    "display": "Bhili",
+    "display_english": "Bhili"
+  },
+  {
+    "code": "Bhilodi",
+    "display": "Bhilodi",
+    "display_english": "Bhilodi"
+  },
+  {
+    "code": "Bodo",
+    "display": "Bodo",
+    "display_english": "Bodo"
+  },
+  {
+    "code": "Coorgi",
+    "display": "Coorgi",
+    "display_english": "Coorgi"
+  },
+  {
+    "code": "Dafla",
+    "display": "Dafla",
+    "display_english": "Dafla"
+  },
+  {
+    "code": "Dimasa",
+    "display": "Dimasa",
+    "display_english": "Dimasa"
+  },
+  {
+    "code": "Dogri",
+    "display": "Dogri",
+    "display_english": "Dogri"
+  },
+  {
+    "code": "English",
+    "display": "English",
+    "display_english": "English"
+  },
+  {
+    "code": "Garo",
+    "display": "Garo",
+    "display_english": "Garo"
+  },
+  {
+    "code": "Gondi",
+    "display": "Gondi",
+    "display_english": "Gondi"
+  },
+  {
+    "code": "Gujarati",
+    "display": "Gujarati",
+    "display_english": "Gujarati"
+  },
+  {
+    "code": "Halabi",
+    "display": "Halabi",
+    "display_english": "Halabi"
+  },
+  {
+    "code": "Hindi",
+    "display": "Hindi",
+    "display_english": "Hindi"
+  },
+  {
+    "code": "Ho",
+    "display": "Ho",
+    "display_english": "Ho"
+  },
+  {
+    "code": "Kannada",
+    "display": "Kannada",
+    "display_english": "Kannada"
+  },
+  {
+    "code": "Karbi",
+    "display": "Karbi",
+    "display_english": "Karbi"
+  },
+  {
+    "code": "Kashmiri",
+    "display": "Kashmiri",
+    "display_english": "Kashmiri"
+  },
+  {
+    "code": "Khandeshi",
+    "display": "Khandeshi",
+    "display_english": "Khandeshi"
+  },
+  {
+    "code": "Kharia",
+    "display": "Kharia",
+    "display_english": "Kharia"
+  },
+  {
+    "code": "Khasi",
+    "display": "Khasi",
+    "display_english": "Khasi"
+  },
+  {
+    "code": "Kisan",
+    "display": "Kisan",
+    "display_english": "Kisan"
+  },
+  {
+    "code": "Kodagu",
+    "display": "Kodagu",
+    "display_english": "Kodagu"
+  },
+  {
+    "code": "Kolami",
+    "display": "Kolami",
+    "display_english": "Kolami"
+  },
+  {
+    "code": "Kondh",
+    "display": "Kondh",
+    "display_english": "Kondh"
+  },
+  {
+    "code": "Konkani",
+    "display": "Konkani",
+    "display_english": "Konkani"
+  },
+  {
+    "code": "Konyak",
+    "display": "Konyak",
+    "display_english": "Konyak"
+  },
+  {
+    "code": "Korku",
+    "display": "Korku",
+    "display_english": "Korku"
+  },
+  {
+    "code": "Koya",
+    "display": "Koya",
+    "display_english": "Koya"
+  },
+  {
+    "code": "Kui",
+    "display": "Kui",
+    "display_english": "Kui"
+  },
+  {
+    "code": "Kurukh",
+    "display": "Kurukh",
+    "display_english": "Kurukh"
+  },
+  {
+    "code": "Ladakhi",
+    "display": "Ladakhi",
+    "display_english": "Ladakhi"
+  },
+  {
+    "code": "Lotha",
+    "display": "Lotha",
+    "display_english": "Lotha"
+  },
+  {
+    "code": "Lushai",
+    "display": "Lushai",
+    "display_english": "Lushai"
+  },
+  {
+    "code": "Maithili",
+    "display": "Maithili",
+    "display_english": "Maithili"
+  },
+  {
+    "code": "Malayalam",
+    "display": "Malayalam",
+    "display_english": "Malayalam"
+  },
+  {
+    "code": "Malto",
+    "display": "Malto",
+    "display_english": "Malto"
+  },
+  {
+    "code": "Manipuri",
+    "display": "Manipuri",
+    "display_english": "Manipuri"
+  },
+  {
+    "code": "Marathi",
+    "display": "Marathi",
+    "display_english": "Marathi"
+  },
+  {
+    "code": "Meitei",
+    "display": "Meitei",
+    "display_english": "Meitei"
+  },
+  {
+    "code": "Mikir",
+    "display": "Mikir",
+    "display_english": "Mikir"
+  },
+  {
+    "code": "Miri",
+    "display": "Miri",
+    "display_english": "Miri"
+  },
+  {
+    "code": "Mishing",
+    "display": "Mishing",
+    "display_english": "Mishing"
+  },
+  {
+    "code": "Mizo",
+    "display": "Mizo",
+    "display_english": "Mizo"
+  },
+  {
+    "code": "Munda",
+    "display": "Munda",
+    "display_english": "Munda"
+  },
+  {
+    "code": "Mundari",
+    "display": "Mundari",
+    "display_english": "Mundari"
+  },
+  {
+    "code": "Nepali",
+    "display": "Nepali",
+    "display_english": "Nepali"
+  },
+  {
+    "code": "Nissi",
+    "display": "Nissi",
+    "display_english": "Nissi"
+  },
+  {
+    "code": "Odia",
+    "display": "Odia",
+    "display_english": "Odia"
+  },
+  {
+    "code": "Phom",
+    "display": "Phom",
+    "display_english": "Phom"
+  },
+  {
+    "code": "Punjabi",
+    "display": "Punjabi",
+    "display_english": "Punjabi"
+  },
+  {
+    "code": "Rabha",
+    "display": "Rabha",
+    "display_english": "Rabha"
+  },
+  {
+    "code": "Santali",
+    "display": "Santali",
+    "display_english": "Santali"
+  },
+  {
+    "code": "Savara",
+    "display": "Savara",
+    "display_english": "Savara"
+  },
+  {
+    "code": "Sema",
+    "display": "Sema",
+    "display_english": "Sema"
+  },
+  {
+    "code": "Sindhi",
+    "display": "Sindhi",
+    "display_english": "Sindhi"
+  },
+  {
+    "code": "Tamil",
+    "display": "Tamil",
+    "display_english": "Tamil"
+  },
+  {
+    "code": "Tangkhul",
+    "display": "Tangkhul",
+    "display_english": "Tangkhul"
+  },
+  {
+    "code": "Telugu",
+    "display": "Telugu",
+    "display_english": "Telugu"
+  },
+  {
+    "code": "Thado",
+    "display": "Thado",
+    "display_english": "Thado"
+  },
+  {
+    "code": "Tripuri",
+    "display": "Tripuri",
+    "display_english": "Tripuri"
+  },
+  {
+    "code": "Tulu",
+    "display": "Tulu",
+    "display_english": "Tulu"
+  },
+  {
+    "code": "Urdu",
+    "display": "Urdu",
+    "display_english": "Urdu"
+  }
+]

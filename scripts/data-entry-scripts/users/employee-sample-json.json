@@ -1,0 +1,14 @@
+{
+  "name": "Ajay",
+  "mobile_no": "9999999999", // Convert to String
+  "password": "9999999999", //Same as mobile_no
+  "profile_pic_url" : "https://fosGLA",
+  "roles": "employee",
+  "email": "abc@cdm.com",
+  "gender": "M",
+  "aadhar_no": "9999-9999-9999",
+  "education": "twelth_pass",
+  "languages": ["English"],
+  "total_experience": 5,
+  "city": "Bangalore"
+}

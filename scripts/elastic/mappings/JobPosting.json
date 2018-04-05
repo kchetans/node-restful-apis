@@ -1,0 +1,399 @@
+{
+  "settings": {
+    "analysis": {
+      "tokenizer": {
+        "edge_ngram_tokenizer": {
+          "type": "edge_ngram",
+          "min_gram": 2,
+          "max_gram": 10
+        }
+      },
+      "filter": {
+        "collapse_filter":{
+          "type": "word_delimiter",
+          "catenate_words": "true",
+          "generate_word_parts": "false"
+
+        },
+        "autocomplete_filter": {
+          "type": "ngram",
+          "min_gram": 2,
+          "max_gram": 50
+        },
+        "trigram_filter": {
+          "type": "ngram",
+          "min_gram": 3,
+          "max_gram": 3
+        },
+        "stemmer_filter": {
+          "type": "stemmer",
+          "name": "english"
+        },
+        "stopword_filter": {
+          "type": "stop",
+          "stopwords": "_english_"
+        },
+        "edge_ngram_filter": {
+          "type": "edge_ngram",
+          "min_gram": 2,
+          "max_gram": 20
+        },
+        "custom_stop": {
+          "type": "stop",
+          "stopwords": ["all", "another", "any", "anybody", "anyone", "anything", "I", "it ", "its", "itself", "several", "she", "some", "somebody", "someone", "something", "both", "that", "their", "theirs", "them", "themselves", "these", "they", "this", "those", "many", "me", "mine", "more", "most", "much", "my", "myself", "each", "each other", "either", "everybody", "everyone", "everything", "little", "few", "us", "neither", "no one", "nobody", "none", "nothing", "he", "her", "", "hers", "herself", "him", "himself", "his", "we", "what", "whatever", "which", "whichever", "who", "whoever", "whom", "whomever", "whose", "one", "one another", "other", "others", "our", "ours", "ourselves", "you", "your", "yours", "yourself", "yourselves", "noone", "oneanother", "my", "am"]
+        },
+        "custom_shingle": {
+          "type": "shingle",
+          "min_shingle_size": "2",
+          "max_shingle_size": "3"
+        },
+        "custom_length":{
+          "type": "length",
+          "min": "2"
+        }
+      },
+      "char_filter": {
+        "emoticons": {
+          "type": "mapping",
+          "mappings": [
+            ":) => _happy_",
+            ":( => _sad_"
+          ]
+        }
+      },
+      "analyzer": {
+        "collapse":{
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "asciifolding",
+            "trim",
+            "lowercase",
+            "custom_length",
+            "stop",
+            "custom_stop",
+            "collapse_filter"
+          ]
+        },
+        "job_description": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "asciifolding",
+            "trim",
+            "lowercase",
+            "custom_length",
+            "stop",
+            "custom_stop",
+            "unique",
+            "word_delimiter"
+          ]
+        },
+        "jd_autocomplete": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "asciifolding",
+            "trim",
+            "lowercase",
+            "custom_length",
+            "stop",
+            "custom_stop",
+            "unique",
+            "word_delimiter",
+            "edge_ngram_filter"
+          ]
+        },
+        "autocomplete": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "asciifolding",
+            "trim",
+            "lowercase",
+            "autocomplete_filter"
+          ]
+        },
+        "trigram": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "asciifolding",
+            "trim",
+            "lowercase",
+            "trigram_filter"
+          ]
+        },
+        "stemmer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "asciifolding",
+            "trim",
+            "lowercase",
+            "stemmer_filter"
+          ]
+        },
+        "lower_keyword": {
+          "type": "custom",
+          "tokenizer": "keyword",
+          "filter": [
+            "asciifolding",
+            "trim",
+            "lowercase"
+          ]
+        },
+        "keywords": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "char_filter": [
+            "html_strip",
+            "emoticons"
+          ],
+          "filter": [
+            "asciifolding",
+            "trim",
+            "lowercase",
+            "stopword_filter",
+            "stemmer_filter"
+          ]
+        },
+        "reverse": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": ["lowercase", "reverse"]
+        },
+        "edge_ngram": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "asciifolding",
+            "trim",
+            "lowercase",
+            "edge_ngram_filter"
+          ]
+        },
+        "tokenizer": {
+          "tokenizer": "standard",
+          "filter": [
+            "standard",
+            "lowercase",
+            "custom_stop",
+            "custom_shingle"
+          ]
+        },
+        "stopword": {
+          "tokenizer": "standard",
+          "filter": [
+            "standard",
+            "lowercase",
+            "custom_stop",
+            "custom_shingle"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "job_postings": {
+      "properties": {
+        "id": {
+          "type": "keyword"
+        },
+        "created_by": {
+          "type": "keyword"
+        },
+        "cover_pic_url": {
+          "type": "keyword"
+        },
+        "compensation": {
+          "type": "keyword",
+          "fields":{
+            "tokens" :  {
+              "type": "text",
+              "analyzer" : "job_description"
+            }
+          }
+        },
+        "type": {
+          "type": "keyword",
+          "fields":{
+            "tokens" :  {
+              "type": "text",
+              "analyzer" : "collapse"
+            }
+          }
+        },
+        "description": {
+          "type": "text",
+          "fields": {
+            "autocomplete": {
+              "type": "text",
+              "analyzer": "autocomplete"
+            },
+            "stemmer": {
+              "type": "text",
+              "analyzer": "stemmer"
+            },
+            "reverse": {
+              "type": "text",
+              "analyzer": "reverse"
+            },
+            "raw": {
+              "type": "keyword"
+            },
+            "edge_ngrams": {
+              "type": "text",
+              "analyzer": "edge_ngram"
+            },
+            "shingle": {
+              "type": "text",
+              "analyzer": "tokenizer"
+            },
+            "jd_tokens" :  {
+              "type": "text",
+              "analyzer" : "job_description"
+            },
+            "collapse_fields" :  {
+              "type": "text",
+              "analyzer" : "collapse"
+            },
+            "jd_autocomplete":  {
+              "type": "text",
+              "analyzer" : "jd_autocomplete"
+            }
+          }
+        },
+        "city": {
+          "type": "text",
+          "analyzer": "autocomplete",
+          "fields": {
+            "raw": {
+              "type": "keyword"
+            },
+            "edge_ngrams": {
+              "type": "text",
+              "analyzer": "edge_ngram"
+            }
+          }
+        },
+        "contact_name": {
+          "type": "text",
+          "fields": {
+            "autocomplete": {
+              "type": "text",
+              "analyzer": "autocomplete"
+            },
+            "stemmer": {
+              "type": "text",
+              "analyzer": "stemmer"
+            },
+            "reverse": {
+              "type": "text",
+              "analyzer": "reverse"
+            },
+            "raw": {
+              "type": "keyword"
+            },
+            "edge_ngrams": {
+              "type": "text",
+              "analyzer": "edge_ngram"
+            },
+            "token": {
+              "type": "text",
+              "analyzer": "tokenizer"
+            },
+            "jd_tokens" :  {
+              "type": "text",
+              "analyzer" : "job_description"
+            },
+            "collapse_fields" :  {
+              "type": "text",
+              "analyzer" : "collapse"
+            }
+          }
+        },
+        "title": {
+          "type": "text",
+          "fields": {
+            "autocomplete": {
+              "type": "text",
+              "analyzer": "autocomplete"
+            },
+            "stemmer": {
+              "type": "text",
+              "analyzer": "stemmer"
+            },
+            "reverse": {
+              "type": "text",
+              "analyzer": "reverse"
+            },
+            "raw": {
+              "type": "keyword"
+            },
+            "edge_ngrams": {
+              "type": "text",
+              "analyzer": "edge_ngram"
+            },
+            "token": {
+              "type": "text",
+              "analyzer": "tokenizer"
+            },
+            "jd_tokens" :  {
+              "type": "text",
+              "analyzer" : "job_description"
+            },
+            "collapse_fields" :  {
+              "type": "text",
+              "analyzer" : "collapse"
+            },
+            "jd_autocomplete":  {
+              "type": "text",
+              "analyzer" : "jd_autocomplete"
+            }
+          }
+        },
+        "category": {
+          "type": "text",
+          "fields": {
+            "autocomplete": {
+              "type": "text",
+              "analyzer": "autocomplete"
+            },
+            "stemmer": {
+              "type": "text",
+              "analyzer": "stemmer"
+            },
+            "reverse": {
+              "type": "text",
+              "analyzer": "reverse"
+            },
+            "raw": {
+              "type": "keyword"
+            },
+            "edge_ngrams": {
+              "type": "text",
+              "analyzer": "edge_ngram"
+            },
+            "token": {
+              "type": "text",
+              "analyzer": "tokenizer"
+            },
+            "jd_tokens" :  {
+              "type": "text",
+              "analyzer" : "job_description"
+            },
+            "collapse_fields" :  {
+              "type": "text",
+              "analyzer" : "collapse"
+            },
+            "jd_autocomplete":  {
+              "type": "text",
+              "analyzer" : "jd_autocomplete"
+            }
+          }
+        }
+      }
+    }
+  }
+}

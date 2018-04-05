@@ -1,0 +1,50 @@
+{
+  "barista_bartender": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/barista_%26_bartender.png"
+  ],
+  "beauty_Wellness": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/beauty_%26_wellness.png"
+  ],
+  "careworkers_health": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/hospitality_and_care.png"
+  ],
+  "chef_cook": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/Chef_%26_cook.png"
+  ],
+  "cleaner": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/cleaner.png"
+  ],
+  "construction": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/construction.png"
+  ],
+  "driver_courier": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/driver_%26_courier.png"
+  ],
+  "education": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/education.png"
+  ],
+  "events_promotion": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/event.png"
+  ],
+  "kitchen_porter": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/kitchen_porter.png"
+  ],
+  "office_admin": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/office_admin.png"
+  ],
+  "retail": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/retail.png"
+  ],
+  "sales_marketing": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/sales_marketing.png"
+  ],
+  "waiter_waitress": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/Waiter.png"
+  ],
+  "warehouse": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/warehouse.png"
+  ],
+  "others": [
+    "https://s3.ap-south-1.amazonaws.com/app-util-images/others.png"
+  ]
+}

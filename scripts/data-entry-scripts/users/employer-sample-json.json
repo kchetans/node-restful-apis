@@ -1,0 +1,18 @@
+{
+  "name": "Ajay",
+  "mobile_no": "9999999999", // Convert to String
+  "password": "9999999999", //Same as mobile_no
+  "roles": "employer",
+  "org_code": "org_codesdd___",
+  "org_name": "org_name",
+  "org_type": "Training",
+  "org_logo_url": "org_logo_url",
+  "contact_details" : {
+    "web_site_url" : "web_site_url"
+  },
+  "registered_person" : { // same as name and mobile_no
+    "name" : "name",
+    "designation" : "designation",
+    "mobile_no" : "mobile_no"
+  }
+}

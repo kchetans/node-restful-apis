@@ -1,0 +1,38 @@
+{
+  "male": [
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_1.png"
+  ],
+  "female": [],
+  "both": [
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_1.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_2.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_3.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_4.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_5.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_6.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_7.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_8.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_9.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_10.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_11.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_12.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_13.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_14.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_15.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_16.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_17.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_18.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_19.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_20.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_21.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_22.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_23.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_24.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_25.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_26.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_27.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_28.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_29.png",
+    "https://s3.ap-south-1.amazonaws.com/user-cover-pics/PROFILE_30.png"
+  ]
+}
